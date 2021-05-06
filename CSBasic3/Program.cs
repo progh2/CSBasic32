@@ -15,7 +15,7 @@ namespace CSBasic3
 
             int i = 0;
             int[] intArray2 = { 52, 273, 32, 65, 103 };
-            while(i < intArray2.Length)
+            while (i < intArray2.Length)
             {
                 Console.WriteLine(i + "번째 출력:" + intArray2[i]);
                 i++;
@@ -27,6 +27,11 @@ namespace CSBasic3
                 Console.Write("입력(종료:exit):");
                 input = Console.ReadLine();
             } while (input != "exit");
+
+            for (int j = '가'; j <= '힣'; j++)
+            {
+                Console.Write((char)j);
+            }
         }
     }
 }
