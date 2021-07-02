@@ -221,6 +221,30 @@ namespace CSBasic5
 
             Box wrongBox = new Box(-10, -5);
             Console.WriteLine(wrongBox.Area);
+
+            int a = 10;
+            Change(a);
+            Console.WriteLine(a);
+
+            TestSome t = new TestSome();
+            t.value = 30;
+            TestSome.Change(t);
+            Console.WriteLine(t.value);
+        }
+
+
+
+        static void Change(int input)
+        {
+            input = 20;
+        }
+    }
+    class TestSome
+    {
+        public int value = 10;
+        public static void Change(TestSome input)
+        {
+            input.value = 20;
         }
     }
 }
