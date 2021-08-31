@@ -8,6 +8,7 @@ namespace CSBasic7
 {
    class Products
     {
+
         private List<string> list = new List<string>();
         public Products()
         {
@@ -27,6 +28,31 @@ namespace CSBasic7
 
     class Program
     {
+        class PointClass
+        {
+            public int x;
+            public int y;
+            public PointClass(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
+            }
+        }
+        struct Point
+        {
+            public int x;
+            public int y;
+            public string s;
+
+            public Point(int x, int y)
+            {
+                this.x = x;
+                //this.x = 0;
+                this.y = y;
+                this.s = null;
+            }
+        }
+
         static void NextPostion(int x, int y, int vx, int vy, 
             out int rx, out int ry)
         {
@@ -53,6 +79,28 @@ namespace CSBasic7
 
         static void Main(string[] args)
         {
+            Point p = new Point(10, 20);
+            Point p2 = p;
+            p2.x = 100;
+            p2.y = 200;
+            Console.WriteLine(p.x + ", " + p.y);
+            Console.WriteLine(p2.x + ", " + p2.y);
+
+            PointClass pc = new PointClass(10, 20);
+            PointClass pc2 = pc;
+            pc2.x = 100;
+            pc2.y = 200;
+            Console.WriteLine(pc.x + ", " + pc.y);
+            Console.WriteLine(pc2.x + ", " + pc2.y);
+
+            Point point;
+            point.x = 10;
+            point.y = 10;
+
+            Point point2 = new Point(10, 10);
+            Point point3 = new Point();
+            
+
             int x = 0;
             int y = 0;
             int vx = 1;
